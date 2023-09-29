@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: heebo;
+    direction: rtl;
+}
+
+html {
+    scroll-padding:
+        var(--scroll-padding, 3.8rem);
+    font-family: Heebo;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+$baseWidth: 100%;
+
+/* TEXT */
+$h1Size: 2.1rem;
+$h3Size: 2rem !important;
+$h4Size: 1.4rem;
+$textSize: 1.1rem;
+$textColor: #3A3A3A;
+
+
+/* BUTTON */
+@mixin button-style {
+    background-color: #1AE0EC;
+    width: 9.563rem;
+    height: 1.875rem;
+    margin: 1rem 0.3rem 0;
+    border: none;
+    border-radius: 50px;
+    color: #2C2C2C;
+    font: 800 0.9rem Heebo;
+    transition: all 0.2s ease;
+}
+
+@mixin button-style-a {
+    text-decoration: none;
+    color: $textColor;
+}
+
+@mixin button-style-hover {
+    cursor: pointer;
+    background-color: #1ef4ff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    width: 100vw;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

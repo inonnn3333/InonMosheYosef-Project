@@ -1,0 +1,55 @@
+.head-box {
+    width: $baseWidth;
+    height: 20em;
+    margin-top: 3.9em;
+    background-image: url(Images/overlay-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head-box-background {
+    width: $baseWidth;
+    height: $baseWidth;
+    background-color: #13E8F163;
+    @include flex-center;
+}
+
+.head-box-in {
+    width: $baseWidth;
+    color: $textColor;
+    text-align: center;
+}
+
+.head-box-in #h2 {
+    font-size: $h1Size;
+    line-height: 1.2;
+}
+
+.head-box-in p {
+    font: $textSize;
+    padding: 0 10%;
+}
+
+/* BUTTON */
+.head-box-in {
+    .button {
+        @include button-style;
+        width: 13em;
+    }
+
+    .button a {
+        @include button-style-a;
+    }
+
+    .button:hover {
+        @include button-style-hover;
+    }
+}
+
+/* BREAK POINT */
+
+@media (max-width: 800px) {
+    .head-box-in {
+        padding: 10%;
+    }
+}

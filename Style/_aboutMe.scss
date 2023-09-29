@@ -1,0 +1,43 @@
+.about-me {
+    width: 100%;
+    padding: 5rem 0;
+    @include flex-center;
+    text-align: center;
+}
+
+.about-me img {
+    width: 150px;
+}
+
+.about-me h3 {
+    font-size: $h3Size;
+    color: $textColor;
+    line-height: 3;
+}
+
+.about-me p {
+    width: 50%;
+    font: $textSize;
+}
+
+/* BUTTON */
+.about-me .button {
+    @include button-style;
+}
+
+.about-me .button a {
+    @include button-style-a;
+}
+
+.about-me .button:hover {
+    @include button-style-hover;
+}
+
+/* BREAK POINT */
+
+@media (max-width: 800px) {
+    .about-me p {
+        width: 70%;
+        font: $textSize;
+    }
+}

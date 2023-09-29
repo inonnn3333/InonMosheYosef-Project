@@ -1,0 +1,117 @@
+.gallery-container {
+    width: $baseWidth;
+    padding: 5em 0 7em 0;
+    background-color: #F6F6F6;
+    @include flex-center;
+
+    h3 {
+        font-size: $h3Size;
+        color: $textColor;
+    }
+
+    p {
+        width: 50%;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .gallrey-box-container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5% 3%;
+
+        .gallrey-box {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00000044;
+            justify-self: center;
+            transition: all 0.2s ease;
+
+            .gallrey-box-img {
+                width: 100%;
+                height: fit-content;
+
+
+                img {
+                    width: 100%;
+                    border-radius: 10px 10px 0 0;
+                    box-shadow: 0 8px 15px #00000025;
+                }
+            }
+
+            .gallery-box-content {
+                height: 100%;
+                padding: 2em 0;
+                @include flex-center;
+
+                h4 {
+                    font-size: $h4Size;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: 1rem;
+                    margin-bottom: .8em;
+                }
+
+                .gallery-box-content-img {
+                    @include flex-center;
+                    flex-direction: row;
+
+                    img {
+                        width: 1em;
+                    }
+
+
+                }
+
+                /* BUTTON */
+                .button {
+                    @include button-style;
+                }
+
+                .button a {
+                    @include button-style-a;
+                }
+
+                .button:hover {
+                    @include button-style-hover;
+                }
+            }
+        }
+
+        .gallrey-box:hover {
+            box-shadow: 0 0px 25px #00000074;
+        }
+    }
+}
+
+
+
+/* BREAK POINT */
+
+@media (max-width: 800px) {
+    .gallery-container {
+        padding: 6em 0 40em 0;
+
+        .gallrey-box-container {
+            grid-template-columns: repeat(1, 1fr);
+
+            .gallrey-box {
+                width: 70%;
+
+                .gallery-box-content {
+                    padding: 2em 2%;
+                }
+            }
+        }
+
+    }
+}

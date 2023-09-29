@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    padding: 5rem 0;
+    font-family: Heebo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5EEFF;
+    /* overflow-x: hidden; */
+}
+
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "content content img1 img2"
+        "content content img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 form form"
+        "img11 img12 form form"
+        "img13 img14 form form";
+    gap: 10px;
+}
+
+.content-container {
+    background-color: #020253;
+    color: #0EE1DA;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1em;
+    border: 1px solid #000;
+}
+
+
+.content-container h1 {
+    font-size: 3rem;
+}
+
+.content-container p {
+    font-size: 1rem;
+}
+
+
+
+.form-container {
+    background-color: #8E097C;
+    color: #fff;
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 1em 2em 1em;
+}
+
+.form-container h2 {
+    width: 100%;
+    text-align: center;
+    font: bold 1.8rem Heebo;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+.form-container p {
+    width: 100%;
+    margin-top: 21px;
+    text-align: center;
+    font: normal 1.1rem Heebo;
+    color: #F9F9F9;
+}
+
+.form-container .form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.form-container .label {
+    width: 100%;
+    text-align: right;
+    font: bold 1rem Heebo;
+    letter-spacing: 0px;
+    color: #0EE1DA;
+}
+
+.form-container .input {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0;
+    border-bottom: 3px solid #0EE1DA;
+    font: normal 1rem Heebo;
+    transition: all 0.2s;
+}
+
+.form-container .input:hover {
+    background: #e2e2e2;
+}
+
+.form-container .textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.form-container .button {
+    width: 100%;
+    height: 40px;
+    color: #011560;
+    background: #0EE1DA 0% 0% no-repeat padding-box;
+    font: normal normal bold 22px/30px Heebo;
+    border: 0;
+    transition: all 0.2s;
+    margin: 33px 0 0 0;
+}
+
+.form-container button:hover {
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.297);
+}
+
+
+
+
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #000;
+}
+
+.img-1 {
+    grid-area: img1;
+    align-self: stretch;
+}
+
+.img-2 {
+    grid-area: img2;
+    align-self: stretch;
+}
+
+.img-3 {
+    grid-area: img3;
+}
+
+.img-4 {
+    grid-area: img4;
+}
+
+.img-5 {
+    grid-area: img5;
+}
+
+.img-6 {
+    grid-area: img6;
+}
+
+.img-7 {
+    grid-area: img7;
+}
+
+.img-8 {
+    grid-area: img8;
+    align-self: stretch;
+}
+
+.img-9 {
+    grid-area: img9;
+    align-self: stretch;
+}
+
+.img-10 {
+    grid-area: img10;
+}
+
+.img-11 {
+    grid-area: img11;
+}
+
+.img-12 {
+    grid-area: img12;
+}
+
+.img-13 {
+    grid-area: img13;
+}
+
+.img-14 {
+    grid-area: img14;
+}
+
+
+
+/* BREAK POINT */
+@media (max-width: 800px) {
+    body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 85%;
+        padding-bottom: 2em;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+            "content content"
+            "content content"
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "form form"
+            "form form"
+            "form form"
+            "img9 img10"
+            "img11 img12"
+            "img13 img14";
+        gap: 10px;
+    }
+
+    .content-container {
+        width: 100%;
+    }
+}

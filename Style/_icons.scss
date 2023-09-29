@@ -1,0 +1,20 @@
+.icons {
+    width: 100%;
+    padding: 1em 2em;
+    @include flex-center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #1AE0EC;
+
+    .icon-box {
+        padding: 1em;
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+
+        p {
+            line-height: 2;
+        }
+    }
+}
