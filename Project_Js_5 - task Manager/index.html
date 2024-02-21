@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js" defer type="module"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>מנהל משימות</h1>
+
+        <form>
+            <label for="details">Details</label>
+            <textarea type="text" name="details" id="details"
+                placeholder="רשום כאן משימה: לדוג: להאכיל את הכלב"></textarea>
+
+            <button id="addTask" type="submit">הוסף</button>
+            <button id="deleteAll" type="submit">מחק הכל</button>
+        </form>
+
+        <div id="TasksView">
+            <table id="table">
+                <tr>
+                    <th>פירוט</th>
+                    <th>פעולות</th>
+                </tr>
+
+                <tbody id="ulTaskList">
+                    <!-- JS CONTENT -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

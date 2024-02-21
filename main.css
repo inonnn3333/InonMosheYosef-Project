@@ -129,7 +129,7 @@ body {
 }
 
 .about-me h3 {
-  font-size: 2rem !important;
+  font-size: 2rem;
   color: #3A3A3A;
   line-height: 3;
 }
@@ -180,7 +180,7 @@ body {
   justify-content: center;
 }
 .gallery-container h3 {
-  font-size: 2rem !important;
+  font-size: 2rem;
   color: #3A3A3A;
 }
 .gallery-container p {
@@ -268,6 +268,10 @@ body {
   box-shadow: 0 0px 25px rgba(0, 0, 0, 0.4549019608);
 }
 
+.gallery-container-js {
+  background-color: #ffffff;
+}
+
 /* BREAK POINT */
 @media (max-width: 800px) {
   .gallery-container {
@@ -298,7 +302,7 @@ body {
   /* BUTTON */
 }
 .contact .contact-box h3 {
-  font-size: 2rem !important;
+  font-size: 2rem;
   color: #FFFFFF;
 }
 .contact .contact-box p {
@@ -401,10 +405,16 @@ body {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #1AE0EC;
 }
-.icons .icon-box {
+.icons a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.icons a hgroup {
   padding: 1em;
   width: -moz-fit-content;
   width: fit-content;
@@ -412,7 +422,10 @@ body {
   height: fit-content;
   text-align: center;
 }
-.icons .icon-box p {
+.icons a hgroup img {
+  width: 2em;
+}
+.icons a hgroup p {
   line-height: 2;
 }
 

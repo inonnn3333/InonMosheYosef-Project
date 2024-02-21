@@ -4,17 +4,28 @@
     @include flex-center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #1AE0EC;
 
-    .icon-box {
-        padding: 1em;
-        width: fit-content;
-        height: fit-content;
+    a {
         text-align: center;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
 
-        p {
-            line-height: 2;
+        hgroup {
+            padding: 1em;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+
+            img {
+                width: 2em;
+            }
+
+            p {
+                line-height: 2;
+            }
         }
     }
 }
