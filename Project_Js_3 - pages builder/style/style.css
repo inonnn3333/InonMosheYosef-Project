@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 .container {
@@ -17,10 +17,10 @@
 
 /* EDIT SPACE */
 .editSpace {
-    width: 30%;
+    width: fit-content;
     height: 100%;
     padding: 1em;
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(124, 124, 124);
     justify-content: center;
     align-content: flex-end;
 }
@@ -29,6 +29,13 @@
     width: 100%;
     height: 70%;
     overflow: auto;
+    display: none;
+    direction: rtl;
+}
+
+.showHide button img {
+    width: 25px;
+    cursor: pointer;
 }
 
 .boxForLabel {
@@ -46,28 +53,56 @@ textarea {
 
 .btnBox {
     width: 100%;
-    padding: 1em;
+    padding: 2em;
+    direction: rtl;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.btn {
-    padding: 0.3em 0.4em;
+.btn,
+#yes,
+#no {
+    /* padding: 0.3em 0.4em;
     border-radius: 4px;
     border: 0;
-    background-color: #59ab5e;
+    background-color: #59ab5e; */
+    outline: 0;
+    align-items: center;
+    background: 0 0;
+    border: 1px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+    /* display: inline-flex; */
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 0.2em;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;
 }
 
-.btn:hover {
-    cursor: pointer;
-    background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+.btn:hover,
+#yes:hover,
+#no:hover {
+    background-color: #FF4742;
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px, -4px);
 }
+
+.btn:focus-visible,
+#yes:focus-visible,
+#no:focus-visible {
+    outline-offset: 1px;
+}
+
 
 /* WHITE SPACE */
 .whiteSpace {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,13 +118,12 @@ textarea {
 }
 
 /* MASSAGE */
-#massage,
-#massageData {
+#massage {
     display: none;
     position: absolute;
     text-align: center;
-    width: 200px;
-    height: 50px;
+    width: 12em;
+    padding: 1em;
     top: 50%;
     left: 20%;
     background-color: white;
@@ -97,10 +131,8 @@ textarea {
 }
 
 
-/* TRY IT */
 .myDiv {
-    /* display: inline-block; */
-    text-align: center;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }

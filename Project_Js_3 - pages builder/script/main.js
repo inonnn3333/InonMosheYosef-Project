@@ -1,8 +1,9 @@
 import { createDiv } from "./createElement.js";
 import { clearFunc, yesFunc, noFunc } from "./btn.js";
-import { save, loadElements } from "./localStorage.js";
+import { save } from "./localStorage.js";
+import { loadElements } from "./localStorage.js";
 
-// When the user ckick the button - the element created
+// When the user click the button - the element created
 document.getElementById('createBtn').addEventListener('click', createDiv);
 // Clear Botton
 document.getElementById('clearBtn').addEventListener('click', clearFunc);
@@ -12,7 +13,34 @@ document.getElementById('yes').addEventListener('click', yesFunc);
 document.getElementById('no').addEventListener('click', noFunc);
 // If the user click on the SAVE BTN
 document.getElementById('saveBtn').addEventListener('click', save);
-// If the user click on the LOAD BTN
-document.getElementById('loadBtn').addEventListener('click', loadElements);
 
+function showFromLs () {
+    if (localStorage.getItem("savedElements") !== null) {
+        loadElements();
+    } else return;
+}
+showFromLs();
+
+
+const showBtn = document.getElementById('showBtn');
+const hideBtn = document.getElementById('hideBtn');
+const btnBox = document.getElementById('btnBox');
+const editSpaceInner = document.getElementById('editSpaceInner');
+hideBtn.style.display = "none";
+btnBox.style.display = "none";
+
+hideBtn.addEventListener('click', evt => {
+    editSpaceInner.style.display = "none";
+    btnBox.style.display = "none";
+    editSpaceInner.classList.remove("show");
+    hideBtn.style.display = "none";
+    showBtn.style.display = "block";
+})
+showBtn.addEventListener('click', evt => {
+    editSpaceInner.style.display = "block";
+    btnBox.style.display = "block";
+    editSpaceInner.classList.add("show");
+    hideBtn.style.display = "block";
+    showBtn.style.display = "none";
+})
 

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-container img {
+    height: 100%;
+}
+
+.form-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.form-container-in {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#form-headline {
+    width: 100%;
+    text-align: right;
+    font: normal normal 900 2.688rem/3.938rem Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+}
+
+#form-paragraph {
+    width: 100%;
+    text-align: right;
+    font: normal normal normal 1.25rem/1.813rem Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+}
+
+.label {
+    height: 100%;
+    text-align: right;
+    font: bold 1rem/1.5rem Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    font: .7rem Heebo;
+    border: 0;
+    border-bottom: 4px solid #020253;
+    transition: all 0.2s;
+}
+
+.input:hover {
+    background-color: #cedefa;
+}
+
+#btn {
+    width: 166px;
+    height: 50px;
+    margin-top: 33px;
+    height: 50px;
+    color: #ffffff;
+    background: #020253 0% 0% no-repeat padding-box;
+    font: normal normal bold 1.375rem/1.875rem Heebo;
+    border: 0;
+    transition: all 0.2s;
+}
+
+#btn:hover {
+    cursor: pointer;
+    color: #020253;
+    background: #ffffff;
+    border: 1px solid #020253;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.297);
+}
+
+@media screen and (max-width:800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-bottom: 5em;
+    }
+
+    .form-container-in {
+        width: 80%;
+    }
+
+    #form-headline {
+        font-size: 1.8rem;
+    }
+
+    #form-paragraph {
+        font-size: 1.2rem;
+    }
+
+    .label {
+        width: 100%;
+        height: 25px;
+    }
+
+    .input {
+        width: 100%;
+        height: 34px;
+    }
+
+    #btn {
+        width: 100%;
+        height: 34px;
+    }
+}

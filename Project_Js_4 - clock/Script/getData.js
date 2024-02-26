@@ -1,4 +1,8 @@
 import { createImg } from "./createImg.js";
+import {  getUTC } from "./createClock.js";
+const msg = document.getElementById('msg');
+msg.style.display = "none";
+
 
 //! function get the data from the service
 async function getData(name) {
@@ -7,7 +11,6 @@ async function getData(name) {
         const data = await response.json();
         return data;
     } catch (err) {
-        console.log("ERROR", err);
         throw err;
     }
 };
@@ -16,19 +19,27 @@ async function getData(name) {
 export async function dataInformation (countryName) {
     let myData = getData(countryName);
     myData.then((data) => {
-        // const ssdata = data[0];
         const dataFlag = data[0].flags.png;
         const dataCountryName = data[0].altSpellings[0];
         const dataUTC = data[0].timezones[0];
 
-        const countryData = {
+        let countryData = {
             dataFlag,
             dataCountryName,
             dataUTC
         };
-        console.log(countryData);
-        // console.log(ssdata);
-        //! call the "createImg" function with the correct flug
+        //! call the "createImg" function with the correct flag
         createImg(countryData.dataFlag)
+        getUTC(countryData.dataUTC);
     });
 };
+
+
+// function msgDisplay (somevalue){
+//     if (!somevalue) {
+//         msg.style.display = "block";
+//         setInterval(() => {
+//             msg.style.display = "none";
+//         }, 5000);
+//     } else return;
+// }

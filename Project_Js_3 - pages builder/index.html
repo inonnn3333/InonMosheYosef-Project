@@ -5,86 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Js 3</title>
-    <script type="module" defer src="./script/main.js"></script>
+    <script type="module" src="./script/main.js" defer></script>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="editSpace">
-            <div class="editSpaceInner">
-                <label for="element">Type of Element</label>
+            <div class="showHide">
+                <button id="showBtn"><img src="./edit-icon.png" alt="edit-icon"></button>
+                <button id="hideBtn"><img src="./chevron-right-icon.png" alt="chevron-right-icon"></button>
+            </div>
+
+            <div class="editSpaceInner" id="editSpaceInner">
+                <label for="element">סוג האלמנט</label>
                 <select class="element" id="someElement">
                     <option selected disabled></option>
-                    <option value="Div">Div</option>
-                    <option value="Span">Span</option>
-                    <option value="h1">h1</option>
-                    <option value="h2">h2</option>
-                    <option value="h3">h3</option>
-                    <option value="p">p</option>
+                    <option value="Div">קופסא מסוג - DIV</option>
+                    <option value="Span">קופסא מסוג - SPAN</option>
+                    <option value="h1">כותרת ראשית</option>
+                    <option value="h2">כותרת משנית</option>
+                    <option value="p">טקסט</option>
                 </select>
                 <div class="boxForLabel">
-                    <label for="div-bgc">Background Color</label>
+                    <label for="div-bgc">צבע רקע לאלמנט</label>
                     <input type="color" name="div-bgc" id="bg-color">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-width">Width for the Element</label>
+                    <label for="div-width">רוחב האלמנט (%)</label>
                     <input type="text" name="div-width" id="div-width">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-height">Height for the Element</label>
+                    <label for="div-height">גובה האלמנט (px)</label>
                     <input type="text" name="div-height" id="div-height">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-padding">div-padding</label>
+                    <label for="div-padding">מרחק מסביב לתוכן האלמנט (px)</label>
                     <input type="text" name="div-padding" id="div-padding">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-margin">div-margin</label>
+                    <label for="div-margin">מרחק מסביב לאלמנט (px)</label>
                     <input type="text" name="div-margin" id="div-margin">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-textArea">Write text</label>
+                    <label for="div-textArea">תוכן האלמנט</label>
                     <textarea type="text" name="div-textArea" id="div-textArea"></textarea>
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-font-size">Font Size</label>
+                    <label for="div-font-size">גודל גופן</label>
                     <input type="text" name="div-font-size" id="div-font-size">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-font-color">Font color</label>
+                    <label for="div-font-color">צבע גופן</label>
                     <input type="color" name="div-font-color" id="div-font-color">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-font-size">Border Width</label>
+                    <label for="div-font-size">עובי גבול האלמנט (px)</label>
                     <input type="text" name="div-border-width" id="div-border-width">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-font-color">Border color</label>
+                    <label for="div-font-color">צבע גבול האלמנט</label>
                     <input type="color" name="div-border-color" id="div-border-color">
                 </div>
                 <div class="boxForLabel">
-                    <label for="div-border-radius">div-border-radius</label>
+                    <label for="div-border-radius">רדיוס הגבול (px)</label>
                     <input type="text" name="div-border-radius" id="div-border-radius">
                 </div>
+                <div id="massage">
+                    <p>האם ברצונך למחוק?</p>
+                    <button id="yes">כן</button>
+                    <button id="no">לא</button>
+                </div>
             </div>
-            <div class="btnBox">
-                <button class="btn" id="createBtn">Create</button>
-                <button class="btn" id="clearBtn">Clear</button>
-                <button class="btn" id="saveBtn">Save</button>
-                <button class="btn" id="loadBtn">Load</button>
+            <div class="btnBox" id="btnBox">
+                <button class="btn" id="createBtn">צור אלמנט</button>
+                <button class="btn" id="clearBtn">נקה</button>
+                <button class="btn" id="saveBtn">שמור</button>
             </div>
-        </div>
-        <div id="massage">
-            <p> Are you sure?</p>
-            <button id="yes">Yes</button>
-            <button id="no">No</button>
-        </div>
-
-        <div id="massageData">
-            <p> Are you sure?</p>
-            <button id="yesData">Yes</button>
-            <button id="noData">No</button>
         </div>
 
         <div class="whiteSpace">
