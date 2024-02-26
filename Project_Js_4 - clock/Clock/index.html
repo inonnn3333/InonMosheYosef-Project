@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_Js_4</title>
+    <script type="module" src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="clockContainer">
+            <h2>שעון עולמי</h2>
+            <p>כתבו שם מדינה (באנגלית) בכדי להציג את השעה הנוכחית שם</p>
+            <div id="searchBox">
+                <input type="text" id="value">
+                <button id="btnSearch" class="btn">חפש</button>
+            </div>
+
+            <div class="msg" id="msg">היי, ייתכן וכתבתם שם מדינה שגוי או שלא כתבתם כלל. נסו שוב . &#128512;</div>
+
+            <div id="clock">
+                <span id="hrs"></span>
+                <span>:</span>
+                <span id="min"></span>
+                <span>:</span>
+                <span id="sec"></span>
+                <div id="img"></div>
+            </div>
+
+        </div>
+
+        <div id="containerStopwatch">
+            <div class="stopwatch">
+                <div class="display">00:00:00</div>
+                <button class="btn startStop">התחל</button>
+                <button class="btn lap">הקפה</button>
+                <button class="btn" id="reset">אפס</button>
+            </div>
+
+            <div class="divTable">
+                <table class="lapTable">
+                    <thead>
+                        <tr>
+                            <th>הקפה</th>
+                            <th>זמן</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="btnControls">
+            <button class="btn" id="clockDisplayControl">שעון</button>
+            <button class="btn" id="stopWatchDisplayControl">טיימר</button>
+        </div>
+    </div>
+</body>
+
+</html>

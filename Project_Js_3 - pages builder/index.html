@@ -4,91 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Js 3</title>
-    <script type="module" src="./script/main.js" defer></script>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>for project 1</title>
+    <!-- ICONS LINK -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container">
-        <div class="editSpace">
-            <div class="showHide">
-                <button id="showBtn"><img src="./edit-icon.png" alt="edit-icon"></button>
-                <button id="hideBtn"><img src="./chevron-right-icon.png" alt="chevron-right-icon"></button>
-            </div>
+    <div class="my-container">
 
-            <div class="editSpaceInner" id="editSpaceInner">
-                <label for="element">סוג האלמנט</label>
-                <select class="element" id="someElement">
-                    <option selected disabled></option>
-                    <option value="Div">קופסא מסוג - DIV</option>
-                    <option value="Span">קופסא מסוג - SPAN</option>
-                    <option value="h1">כותרת ראשית</option>
-                    <option value="h2">כותרת משנית</option>
-                    <option value="p">טקסט</option>
-                </select>
-                <div class="boxForLabel">
-                    <label for="div-bgc">צבע רקע לאלמנט</label>
-                    <input type="color" name="div-bgc" id="bg-color">
+        <nav id="my-nav" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-pic">
+                    <a class="navbar-brand my-pic" href="../index.html">
+                        <img src="Images/my-picture.png" alt="My pic">
+                    </a>
+                    <a href="../index.html">
+                        <span>
+                            <p>Inon Moshe Yosef</p>
+                        </span>
+                    </a>
                 </div>
-                <div class="boxForLabel">
-                    <label for="div-width">רוחב האלמנט (%)</label>
-                    <input type="text" name="div-width" id="div-width">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-height">גובה האלמנט (px)</label>
-                    <input type="text" name="div-height" id="div-height">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-padding">מרחק מסביב לתוכן האלמנט (px)</label>
-                    <input type="text" name="div-padding" id="div-padding">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-margin">מרחק מסביב לאלמנט (px)</label>
-                    <input type="text" name="div-margin" id="div-margin">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-textArea">תוכן האלמנט</label>
-                    <textarea type="text" name="div-textArea" id="div-textArea"></textarea>
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-font-size">גודל גופן</label>
-                    <input type="text" name="div-font-size" id="div-font-size">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-font-color">צבע גופן</label>
-                    <input type="color" name="div-font-color" id="div-font-color">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-font-size">עובי גבול האלמנט (px)</label>
-                    <input type="text" name="div-border-width" id="div-border-width">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-font-color">צבע גבול האלמנט</label>
-                    <input type="color" name="div-border-color" id="div-border-color">
-                </div>
-                <div class="boxForLabel">
-                    <label for="div-border-radius">רדיוס הגבול (px)</label>
-                    <input type="text" name="div-border-radius" id="div-border-radius">
-                </div>
-                <div id="massage">
-                    <p>האם ברצונך למחוק?</p>
-                    <button id="yes">כן</button>
-                    <button id="no">לא</button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">ראשי</a>
+                        <a class="nav-link active" href="../index.html#my-about-me">אודות</a>
+                        <a class="nav-link active" href="../index.html#my-projects">פרוייקטים</a>
+                        <a class="nav-link active" href="../index.html#my-contact">צור קשר</a>
+                    </div>
+
                 </div>
             </div>
-            <div class="btnBox" id="btnBox">
-                <button class="btn" id="createBtn">צור אלמנט</button>
-                <button class="btn" id="clearBtn">נקה</button>
-                <button class="btn" id="saveBtn">שמור</button>
+        </nav>
+
+        <div class="head-box">
+            <div class="head-box-background">
+                <div class="head-box-in">
+                    <h2 class="fw-bold">בונה מסכים</h2>
+                    <p>משחק צירת אלמנטים ע"י בחירת המשתמש ושמירתם בLocalstorage</p>
+                    <button class="head-button">
+                        <a href="./PagesBuilderDownload.zip" download>להורדת הפרויקט &#x00BB;</a>
+                    </button>
+                    <button class="head-button">
+                        <a href="./PagesBuilder/index.html" target="_blank" rel="noreferrer noopener">לצפייה בפרויקט
+                            &#x00BB;</a>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="whiteSpace">
-            <div id="whiteSpaceInner" class="whiteSpaceInner"></div>
+        <div class="code-leng">
+            <img src="./Images/css-icon.png" alt="CSS icon">
+            <img src="./Images/html-icon.png" alt="HTML icon">
+            <img src="./Images/javascript-icon.png" alt="JS icon">
         </div>
 
+        <div class="project-img">
+            <a href="./PagesBuilder/index.html" target="_blank" rel="noreferrer noopener">
+                <img src="./Images/PageBuilder.png" alt="project1-img">
+            </a>
+        </div>
+
+
+        <footer class="footer">
+            <p>כל הזכויות שמורות</p>
+            <p>Inon Moshe Yosef</p>
+        </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
