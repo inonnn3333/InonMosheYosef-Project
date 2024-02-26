@@ -103,6 +103,10 @@
     .gallery-container {
         padding: 6em 0 40em 0;
 
+        p {
+            width: 80%;
+        }
+
         .gallrey-box-container {
             grid-template-columns: repeat(1, 1fr);
 

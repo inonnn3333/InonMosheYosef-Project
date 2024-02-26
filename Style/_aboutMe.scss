@@ -6,7 +6,15 @@
 }
 
 .about-me img {
-    width: 150px;
+    width: 10em;
+    border-radius: 50%;
+    transition: width 0.6s ease-in-out;
+}
+
+.about-me img:hover {
+    cursor: pointer;
+    width: 20em;
+    box-shadow: 0 0 20px #0000006e;
 }
 
 .about-me h3 {
@@ -37,7 +45,11 @@
 
 @media (max-width: 800px) {
     .about-me p {
-        width: 70%;
+        width: 80%;
         font: $textSize;
+    }
+
+    .about-me img:hover {
+        width: 90%;
     }
 }

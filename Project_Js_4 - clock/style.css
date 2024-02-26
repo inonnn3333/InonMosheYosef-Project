@@ -64,6 +64,7 @@ body {
 
 .nav-pic .my-pic img {
     width: 2.5em;
+    border-radius: 50%;
 }
 
 .nav-pic a {
