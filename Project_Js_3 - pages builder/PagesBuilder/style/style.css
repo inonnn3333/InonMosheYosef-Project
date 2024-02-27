@@ -7,12 +7,15 @@
     font-family: "Fredoka", sans-serif;
 }
 
+body {
+    background-color: rgb(224, 224, 224);
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
-    background-color: rgb(224, 224, 224);
 }
 
 /* EDIT SPACE */
@@ -23,7 +26,6 @@
     padding: 1em;
     background-color: rgb(124, 124, 124);
     justify-content: center;
-    align-content: flex-end;
 }
 
 .editSpaceInner {
@@ -68,7 +70,6 @@ textarea {
     border: 1px solid #000;
     border-radius: 2px;
     cursor: pointer;
-    /* flex-shrink: 0; */
     font-size: 1rem;
     line-height: 1.5;
     overflow: hidden;
@@ -95,6 +96,7 @@ textarea {
 /* WHITE SPACE */
 .whiteSpace {
     width: 100%;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
