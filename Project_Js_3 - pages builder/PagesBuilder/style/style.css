@@ -18,7 +18,8 @@
 /* EDIT SPACE */
 .editSpace {
     width: fit-content;
-    height: 100%;
+    min-height: fit-content;
+    max-height: 100%;
     padding: 1em;
     background-color: rgb(124, 124, 124);
     justify-content: center;
@@ -53,36 +54,27 @@ textarea {
 
 .btnBox {
     width: 100%;
-    padding: 2em;
-    direction: rtl;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding-right: 1em;
+    border-top: 1px solid #fff;
 }
 
 .btn,
 #yes,
 #no {
-    /* padding: 0.3em 0.4em;
-    border-radius: 4px;
-    border: 0;
-    background-color: #59ab5e; */
+    width: 100%;
+    margin: 0.5em;
     outline: 0;
-    align-items: center;
     background: 0 0;
     border: 1px solid #000;
     border-radius: 2px;
     cursor: pointer;
-    /* display: inline-flex; */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     font-size: 1rem;
     line-height: 1.5;
     overflow: hidden;
-    padding: 0.2em;
     text-decoration: none;
     text-overflow: ellipsis;
     transition: all .14s ease-out;
-    white-space: nowrap;
 }
 
 .btn:hover,
@@ -123,16 +115,59 @@ textarea {
     position: absolute;
     text-align: center;
     width: 12em;
-    padding: 1em;
-    top: 50%;
-    left: 20%;
-    background-color: white;
+    padding-left: 1em;
+    top: 40%;
+    left: 25%;
+    background-color: #fff;
     border: 1px solid #000;
 }
-
 
 .myDiv {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#savedOrNot {
+    text-align: center;
+}
+
+.loader {
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: an1 01s ease infinite;
+    margin: 0 auto;
+}
+
+@keyframes an1 {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .editSpace {
+        width: 100%;
+        /* height: fit-content; */
+        padding: 1em;
+        background-color: rgb(124, 124, 124);
+        justify-content: center;
+        align-content: flex-end;
+    }
+
+    .whiteSpace {
+        min-height: 20em;
+    }
 }

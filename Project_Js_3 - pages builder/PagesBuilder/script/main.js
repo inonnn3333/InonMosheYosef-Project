@@ -28,6 +28,7 @@ const btnBox = document.getElementById('btnBox');
 const editSpaceInner = document.getElementById('editSpaceInner');
 hideBtn.style.display = "none";
 btnBox.style.display = "none";
+btnBox.classList.add('btnBox')
 
 hideBtn.addEventListener('click', evt => {
     editSpaceInner.style.display = "none";

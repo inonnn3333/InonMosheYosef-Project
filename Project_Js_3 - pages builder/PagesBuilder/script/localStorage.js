@@ -1,4 +1,6 @@
 const whiteSpaceInner = document.getElementById('whiteSpaceInner');
+const savedOrNot = document.getElementById('savedOrNot');
+savedOrNot.style.display = "none";
 
 export function save() {
     const children = whiteSpaceInner.children;
@@ -27,16 +29,16 @@ export function save() {
         elementsData.push(elementData);
     }
     localStorage.setItem("savedElements", JSON.stringify(elementsData));
+    console.log(elementsData);
+    savedMsgDiv(elementsData);
 }
 
 
 export function loadElements() {
-    // const whiteSpaceInner = document.getElementById('editSpaceInner');   
     const localStorageData = localStorage.getItem('savedElements');
 
     if (localStorageData) {
         const elementsData = JSON.parse(localStorageData);
-        /* whiteSpaceInner.innerHTML = ''; */
         elementsData.forEach(elementData => {
             const newElement = document.createElement(elementData.tag);
             newElement.textContent = elementData.content;
@@ -45,3 +47,20 @@ export function loadElements() {
         });
     }
 };
+
+function savedMsgDiv(elementOrNot) {
+    savedOrNot.style.display = "block";
+    savedOrNot.innerHTML = "<div class='loader'></div>";
+    if (elementOrNot.length === 0) {
+        setTimeout(() => {
+            savedOrNot.innerHTML = "צור אלמנט בכדי לשמור"
+        }, 2000);
+    } else {
+        setTimeout(() => {
+            savedOrNot.innerHTML = "הפרטים נשמרו בהצלחה"
+        }, 2000);
+    }
+    setTimeout(() => {
+        savedOrNot.style.display = "none";
+    }, 4000);
+}
