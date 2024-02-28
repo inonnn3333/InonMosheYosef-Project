@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserManagement</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="studensSide">
+
+            <div class="button-box">
+                <button type="button" class="login-btn btn" id="login-btn" onclick="loginBtn()">התחברות</button>
+                <button type="button" id="register-btn" class="login-btn btn" onclick="registerBtn()">הרשמה</button>
+            </div>
+
+            <div class="login" id="login">
+                <h2>התחבר אל החשבון שלך</h2>
+                <p>כי למה לא בעצם?</p>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder='שם פרטי' required />
+                    <input type="password" id="login-password" placeholder="סיסמה" required />
+                    <button type="submit" class="btn" id="loginBtn">התחברות</button>
+                </form>
+            </div>
+
+            <div class="register" id="register">
+                <h2>הרשמה</h2>
+                <p>זה מהיר וקל.</p>
+                <form id="registration-form">
+                    <input type="text" id="userName" placeholder="שם פרטי" required />
+                    <input type="text" id="userLastName" placeholder="שם משפחה" required />
+                    <input type="email" id="email" placeholder="דוא''ל" required />
+                    <input type="password" id="password" placeholder="סיסמא" required />
+                    <button id="registerBtn" class="btn" type="submit">צור חשבון חדש</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>רשימת משתמשים</h2>
+
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th>שם פרטי</th>
+                        <th>שם משפחה</th>
+                        <th>דוא"ל</th>
+                        <th>סיסמא</th>
+                        <th>סטטוס</th>
+                        <th>פעולות</th>
+                    </tr>
+                </thead>
+                <tbody id="users-list"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

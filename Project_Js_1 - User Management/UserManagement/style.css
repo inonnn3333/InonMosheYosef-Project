@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8e8e8;
+}
+
+input {
+    font-family: "Fredoka", sans-serif
+}
+
+.container {
+    width: 100%;
+    height: 80%;
+    padding: 2em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.studensSide {
+    width: 40%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.login,
+.register {
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+.login h2,
+.register h2 {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.register {
+    display: none;
+}
+
+#registerBtn,
+#loginBtn {
+    width: 100%;
+}
+
+#registration-form input,
+#login input {
+    width: 100%;
+    padding: 1em;
+    margin: 0.3em 0;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.login-btn {
+    margin: 0 0.2em;
+}
+
+.table-container {
+    width: 60%;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    text-align: center;
+}
+
+.table-container h2 {
+    font-weight: 500;
+}
+
+#users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#users-table th,
+#users-table td {
+    padding: 0.2em;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#users-table th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+    text-align: center;
+}
+
+#users-list tr:hover {
+    background-color: #f2f2f2;
+}
+
+.button-box {
+    display: flex;
+    padding: 0.3em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect {
+    color: green;
+}
+
+.disconnect {
+    color: red;
+}
+
+.btn {
+    font-family: "Fredoka", sans-serif;
+    outline: none;
+    cursor: pointer;
+    font-weight: 100;
+    border-radius: 3px;
+    padding: 0.5em;
+    border: 0;
+    color: #3a4149;
+    background: #1de9b662;
+    line-height: 1.15;
+    font-size: 1rem;
+    margin-top: 0.3em;
+}
+
+.btn:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+.loader {
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #000;
+    animation: an1 01s ease infinite;
+    margin: 0 auto;
+}
+
+@keyframes an1 {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    .studensSide {
+        width: 100%;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+}
