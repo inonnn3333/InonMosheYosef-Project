@@ -1,7 +1,5 @@
 import { createImg } from "./createImg.js";
 import {  getUTC } from "./createClock.js";
-const msg = document.getElementById('msg');
-msg.style.display = "none";
 
 
 //! function get the data from the service

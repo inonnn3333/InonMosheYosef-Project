@@ -1,8 +1,6 @@
 import { dataInformation } from "./Script/getData.js";
 
 const btnSearch = document.getElementById('btnSearch');
-const msg = document.getElementById('msg');
-msg.style.display = "none";
 
 btnSearch.addEventListener('click', ()=> {
     let myValue = document.getElementById('value').value;
